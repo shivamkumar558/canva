@@ -1,0 +1,71 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-text-color:#ffffff;
+    --secondary-text-color:#ef0808;
+    --accent-color-dark:rgb(0, 0, 0);
+    /* --padding-inline-section:20px; */
+
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--primary-text-color);
+    position: relative;
+
+}
+h1{
+    font-size: 2.5rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size:1.5rem;
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+a{
+    text-decoration: none;
+    
+
+}
+
+.small-bold-text
+{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.flex
+{
+    display: flex;
+    align-items: center;
+}
+.prime-btn {
+    background-color: rgb(208, 7, 7);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 3px 1px black;
+}
+
+.prime-btn:hover {
+    background-color: rgb(255, 255, 255);
+    color: var(--accent-color-dark);
+    border: 2px solid var(--accent-color-dark);
+}
+
