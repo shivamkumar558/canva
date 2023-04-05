@@ -12,124 +12,17 @@
 </head>
 
 <body>
-
-<?php
-
-require('connection.php');
-if(isset($_POST['login_submit']))
-{
-    $email=$_POST['email'];   
-    $password=$_POST['password'];
-
-    $email_search="select * from user where email='$email'";
-    $query = mysqli_query($con,$email_search);
-
-    $email_count = mysqli_num_rows($query);
-
-    if($email_count)
-    {
-
-        if($email_search == $password)
-        {
-            echo "Login successful";
-            header('location:index.php');
-        }
-        else
-        {
-            echo "password not valid";
-        }
-    }
-}
-
-if(isset($_POST['register_submit']))
-{
-    $username=$_POST['username'];
-    $email=$_POST['email'];   
-    $password=$_POST['password'];
-
-    $user_exist_query="select * from `user` where `email`=`$email` or `username`=`$username`";
-    $result=mysqli_query($con,$user_exist_query);
-
-
-    
-    if($result)
-    { 
-        if(mysqli_num_rows($result)>0)
-        {
-            $result_fetch=mysqli_fetch_assoc($result);
-            if($result_fetch['username']==$_POST['username'])
-            {
-                #error for username already registered
-                echo "<script> alert('username already taken'); window.location.href='log-sign.php';</script>";  
-            }
-            else
-            {
-                #error for email already registered
-                echo "<script>
-                alert(email already taken');
-                window.location.href=log-sign.php;
-          </script>"; 
-            }
-        }  
-        else
-        {
-            $query="INSERT INTO `user` (`username`, `email`, `password`) VALUES ('$username', '$eamil', '$password')";
-            if(mysqli_query($con,$query))
-            {
-                echo "query inserted sucesulyy";
-            }
-            else
-            {
-                echo "not inserted";
-            }
-        }
-    }
-    else{
-        echo "<script>
-                    alert('Cannot run query');
-                    window.location.href=log-sign.php;
-              </script>";
-    }
-}
-
-
-?>
+   <?php include("log_reg_code.php") ?>
 
     <!-- header -->
-    <section>
-        <div class="header flex">
-            <div class="left-side-header flex">
-                <div class="logo-container">
-                    <img class="website-logo" src="Artlogo.png" alt="logo">
-                </div>
-                <div class="webname">
-                    <a href="index.html">
-                        <h1>Canva</h1>
-                    </a>
-                </div>
-            </div>
-            <div class="right-side-header flex">
-                <div class="nav">
-                    <ul class="flex nav-link">
-                        <li><a href="product-view.html">buy</a></li>
-                        <li><a href="#">sale</a></li>
-                        <li><a href="#">contact</a></li>
-                        <li><a href="log-sign.php" class="header-login prime-btn ">login</a></li>
-                    </ul>
-
-                </div>
-            </div>
-        </div>
-
-
-    </section>
+    <?php include("main-header.php"); ?>
 
     <!-- main-area for login/signup -->
     <main>
         <div class="main-box flex">
             <div class="about-us flex">
                 <h1>Known More About Us</h1>
-                <a href="about.html" class="prime-btn">about us</a>
+                <a href="about.php" class="prime-btn">about us</a>
             </div>
              <div class="log-sign-hero flex"> <!--hero(easy tuts) -->
                 <div class="form-box flex">
