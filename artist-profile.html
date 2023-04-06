@@ -30,7 +30,21 @@
                         <li><a href="product-view.html">buy</a></li>
                         <li><a href="#">sale</a></li>
                         <li><a href="#">contact</a></li>
-                        <li><a href="log-sign.html" class="header-login prime-btn ">login</a></li>
+                        <li class="flex" style="flex-direction: column; position: relative;">
+                             <div class="login-profile-pic ">
+            
+                                 <img src="cool-profile-picture-ld8f4n1qemczkrig.jpg" onclick="drop_menu()" alt="">
+                
+                             </div> 
+                             <div id="profile-dropdown" class="profile-dropdown">
+                                <div class="profile-dropdown-detail flex " style="flex-direction: column;">
+                                    <img src="cool-profile-picture-ld8f4n1qemczkrig.jpg" alt="">
+                                    <h4>User Name</h4>
+                                </div>
+                                <hr>
+                                <button>process_state</button>
+                             </div>  
+                        </li>
                     </ul>
 
                 </div>
@@ -40,7 +54,7 @@
 
     </section>
 
-    <section style="background-color: rgb(228, 133, 8);">
+    <section style="background-color: #d2c0ce;">
         <div class="artist-page-header  flex ">
 
             <div class="artist-page-header-detailbox flex">
@@ -51,7 +65,7 @@
                     <a href="">
                         <h2>Artist Name</h2>
                     </a>
-                    <h3>City , State</h3>
+                    <h4>City , State</h4>
                 </div>
             </div>
             <div class="artist-page-header-socialbox">
@@ -139,6 +153,14 @@
     </section>
 
 
+    <script>
+        var x =document.getElementById("profile-dropdown");
+
+        function drop_menu()
+        {
+            x.classList.toggle("open_menu");
+        }
+    </script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

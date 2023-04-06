@@ -61,6 +61,51 @@ body {
     height: 100%;
 } */
 
+/* --------logged in implementation */
+
+.login-profile-pic
+{ 
+    width: 45px;
+    height: 45px;
+    margin-bottom: 8px;
+}
+
+.login-profile-pic img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;border-radius: 50%;
+    cursor: pointer;
+}
+
+.profile-dropdown
+{
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    display: none;
+    top: 58px;
+    right: 0px;
+    z-index:100;
+    position: absolute;
+    width:250px ;
+    height:40vh ;
+    background-color: #ffffff;
+    color: #000000;
+}
+.profile-dropdown.open_menu
+{
+    
+    display: inline-block;
+}
+
+.profile-dropdown-detail img
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+}
+
 
 
 /* cat-header and catalogue */
@@ -621,12 +666,20 @@ input:valid~label {
 
 /* ------------------- */
 
+.artist-page-header 
+{
+    padding: 0px 40px;
+}
 .artist-header-box {
     display: flex;
     width: 100%;
     height: 25%;
     background-color: rgb(255, 255, 255);
     /* align-items: center; */
+}
+.artist-page-header-socialbox a img
+{
+    width: 35px;
 }
 
 .artist-profile {
@@ -667,10 +720,6 @@ input:valid~label {
     justify-content: center;
 }
 
-.artist-footer a {
-    width: 20vh;
-    height: 7vh;
-}
 
 .artist-footer p {
 

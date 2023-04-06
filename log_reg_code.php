@@ -1,6 +1,7 @@
 <?php
 require("connection.php");
 session_start();
+
 if(isset($_POST['register_submit']))
 {
     $username=$_POST['username'];
